@@ -57,6 +57,7 @@ abstract class Statement
     public static $CLAUSES = array();
 
     public static $END_OPTIONS = array();
+    public static $COLUMN_OPTIONS = array();
 
     /**
      * The options of this query.
@@ -363,8 +364,7 @@ abstract class Statement
                 }
             } elseif ($class === null) {
                 if ($this instanceof Statements\SelectStatement
-                    && ($token->value === 'FOR UPDATE'
-                        || $token->value === 'LOCK IN SHARE MODE')
+                    && (! empty(static::$END_OPTIONS[$token->value]))
                 ) {
                     // Handle special end options in Select statement
                     // See Statements\SelectStatement::$END_OPTIONS
@@ -372,6 +372,16 @@ abstract class Statement
                         $parser,
                         $list,
                         static::$END_OPTIONS
+                    );
+                } elseif ($this instanceof Statements\SelectStatement
+                    && (! empty(static::$COLUMN_OPTIONS[$token->value]))
+                ) {
+                    // Handle special column options in Select statement
+                    // See Statements\SelectStatement::$COLUMN_OPTIONS
+                    $this->column_options = OptionsArray::parse(
+                        $parser,
+                        $list,
+                        static::$COLUMN_OPTIONS
                     );
                 } elseif ($this instanceof Statements\SetStatement
                     && ($token->value === 'COLLATE'

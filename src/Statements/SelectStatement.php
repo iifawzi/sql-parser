@@ -81,6 +81,16 @@ class SelectStatement extends Statement
         'LOCK IN SHARE MODE' => 1
     );
 
+    public static $COLUMN_OPTIONS = array(
+        'IS' => 1,
+        'NOT NULL' => 2,
+        'NULL' => 2,
+        'AS' => array(
+            3,
+            'var=',
+        ),
+    );
+
     /**
      * The clauses of this statement, in order.
      *
