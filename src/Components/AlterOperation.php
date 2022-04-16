@@ -199,7 +199,7 @@ class AlterOperation extends Component
     /**
      * The partitions.
      *
-     * @var PartitionDefinition[]|null
+     * @var Component[]|ArrayObj|null
      */
     public $partitions;
 
@@ -211,9 +211,10 @@ class AlterOperation extends Component
     public $unknown = [];
 
     /**
-     * @param OptionsArray $options options of alter operation
-     * @param Expression   $field   altered field
-     * @param Token[]      $unknown unparsed tokens found at the end of operation
+     * @param OptionsArray              $options    options of alter operation
+     * @param Expression|string|null    $field      altered field
+     * @param Token[]                   $unknown    unparsed tokens found at the end of operation
+     * @param Component[]|ArrayObj|null $partitions partitions definition found in the operation
      */
     public function __construct(
         $options = null,

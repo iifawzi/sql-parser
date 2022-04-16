@@ -11,6 +11,11 @@ parameters:
 			path: src/Components/AlterOperation.php
 
 		-
+			message: "#^Parameter \\#1 \\$component of static method PhpMyAdmin\\\\SqlParser\\\\Components\\\\PartitionDefinition\\:\\:build\\(\\) expects array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\PartitionDefinition\\>\\|PhpMyAdmin\\\\SqlParser\\\\Components\\\\PartitionDefinition, array\\<PhpMyAdmin\\\\SqlParser\\\\Component\\>\\|PhpMyAdmin\\\\SqlParser\\\\Components\\\\ArrayObj given\\.$#"
+			count: 1
+			path: src/Components/AlterOperation.php
+
+		-
 			message: "#^Parameter \\#1 \\$key of function array_key_exists expects int\\|string, float\\|int\\|string given\\.$#"
 			count: 2
 			path: src/Components/AlterOperation.php
@@ -21,22 +26,7 @@ parameters:
 			path: src/Components/AlterOperation.php
 
 		-
-			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\AlterOperation\\:\\:\\$field \\(PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\) does not accept PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\|null\\.$#"
-			count: 2
-			path: src/Components/AlterOperation.php
-
-		-
-			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\AlterOperation\\:\\:\\$field \\(PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\) in isset\\(\\) is not nullable\\.$#"
-			count: 1
-			path: src/Components/AlterOperation.php
-
-		-
 			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\AlterOperation\\:\\:\\$options \\(PhpMyAdmin\\\\SqlParser\\\\Components\\\\OptionsArray\\) does not accept PhpMyAdmin\\\\SqlParser\\\\Components\\\\OptionsArray\\|null\\.$#"
-			count: 1
-			path: src/Components/AlterOperation.php
-
-		-
-			message: "#^Result of && is always true\\.$#"
 			count: 1
 			path: src/Components/AlterOperation.php
 
@@ -61,6 +51,11 @@ parameters:
 			path: src/Components/ArrayObj.php
 
 		-
+			message: "#^Array \\(array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\>\\) does not accept PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\|null\\.$#"
+			count: 3
+			path: src/Components/CaseExpression.php
+
+		-
 			message: "#^Binary operation \"\\.\" between ' AS ' and array\\<string\\>\\|string results in an error\\.$#"
 			count: 1
 			path: src/Components/CaseExpression.php
@@ -68,16 +63,6 @@ parameters:
 		-
 			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\CaseExpression\\:\\:\\$alias \\(string\\|null\\) does not accept mixed\\.$#"
 			count: 1
-			path: src/Components/CaseExpression.php
-
-		-
-			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\CaseExpression\\:\\:\\$compare_values \\(array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\>\\) does not accept array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\|null\\>\\.$#"
-			count: 1
-			path: src/Components/CaseExpression.php
-
-		-
-			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\CaseExpression\\:\\:\\$results \\(array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\>\\) does not accept array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\|null\\>\\.$#"
-			count: 2
 			path: src/Components/CaseExpression.php
 
 		-
@@ -261,17 +246,17 @@ parameters:
 			path: src/Components/JoinKeyword.php
 
 		-
+			message: "#^Array \\(array\\<array\\{name\\?\\: string, length\\?\\: int, order\\?\\: string\\}\\>\\) does not accept non\\-empty\\-array\\<string, mixed\\>\\.$#"
+			count: 1
+			path: src/Components/Key.php
+
+		-
 			message: "#^Binary operation \"\\.\" between array\\<string\\>\\|string and ' ' results in an error\\.$#"
 			count: 1
 			path: src/Components/Key.php
 
 		-
 			message: "#^Binary operation \"\\.\\=\" between '' and array\\<string\\>\\|string results in an error\\.$#"
-			count: 1
-			path: src/Components/Key.php
-
-		-
-			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\Key\\:\\:\\$columns \\(array\\<array\\{name\\?\\: string, length\\?\\: int, order\\?\\: string\\}\\>\\) does not accept non\\-empty\\-array\\<array\\<string, mixed\\>\\>\\.$#"
 			count: 1
 			path: src/Components/Key.php
 
@@ -353,11 +338,6 @@ parameters:
 		-
 			message: "#^Parameter \\#3 \\$options of static method PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\:\\:parse\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
 			count: 1
-			path: src/Components/OptionsArray.php
-
-		-
-			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\OptionsArray\\:\\:\\$options \\(array\\<int, mixed\\>\\) does not accept array\\<int\\|string, mixed\\>\\.$#"
-			count: 8
 			path: src/Components/OptionsArray.php
 
 		-
@@ -516,13 +496,18 @@ parameters:
 			path: src/Lexer.php
 
 		-
+			message: "#^Array \\(array\\<PhpMyAdmin\\\\SqlParser\\\\Statements\\\\SelectStatement\\>\\) does not accept array\\<int, PhpMyAdmin\\\\SqlParser\\\\Statements\\\\SelectStatement\\|string\\|true\\>\\.$#"
+			count: 1
+			path: src/Parser.php
+
+		-
 			message: "#^Cannot access property \\$count on PhpMyAdmin\\\\SqlParser\\\\TokensList\\|null\\.$#"
 			count: 1
 			path: src/Parser.php
 
 		-
 			message: "#^Cannot access property \\$idx on PhpMyAdmin\\\\SqlParser\\\\TokensList\\|null\\.$#"
-			count: 8
+			count: 7
 			path: src/Parser.php
 
 		-
@@ -543,11 +528,6 @@ parameters:
 		-
 			message: "#^Parameter \\#2 \\$list of method PhpMyAdmin\\\\SqlParser\\\\Statement\\:\\:validateClauseOrder\\(\\) expects PhpMyAdmin\\\\SqlParser\\\\TokensList, PhpMyAdmin\\\\SqlParser\\\\TokensList\\|null given\\.$#"
 			count: 3
-			path: src/Parser.php
-
-		-
-			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Statements\\\\SelectStatement\\:\\:\\$union \\(array\\<PhpMyAdmin\\\\SqlParser\\\\Statements\\\\SelectStatement\\>\\) does not accept array\\<array\\<int, bool\\|PhpMyAdmin\\\\SqlParser\\\\Statements\\\\SelectStatement\\|string\\>\\|PhpMyAdmin\\\\SqlParser\\\\Statements\\\\SelectStatement\\>\\.$#"
-			count: 1
 			path: src/Parser.php
 
 		-
@@ -816,6 +796,11 @@ parameters:
 			path: src/Tools/TestGenerator.php
 
 		-
+			message: "#^Method PhpMyAdmin\\\\SqlParser\\\\Tools\\\\TestGenerator\\:\\:generate\\(\\) should return array\\<string, array\\<string, array\\<int, array\\<int, int\\|PhpMyAdmin\\\\SqlParser\\\\Token\\|string\\>\\>\\>\\|PhpMyAdmin\\\\SqlParser\\\\Lexer\\|PhpMyAdmin\\\\SqlParser\\\\Parser\\|string\\|null\\> but returns array\\<string, array\\<string, array\\<int, array\\<int, mixed\\>\\>\\>\\|PhpMyAdmin\\\\SqlParser\\\\Lexer\\|PhpMyAdmin\\\\SqlParser\\\\Parser\\|string\\>\\.$#"
+			count: 1
+			path: src/Tools/TestGenerator.php
+
+		-
 			message: "#^Parameter \\#1 \\$filename of function is_dir expects string, string\\|null given\\.$#"
 			count: 1
 			path: src/Tools/TestGenerator.php
@@ -889,6 +874,11 @@ parameters:
 			message: "#^Parameter \\#2 \\$options of static method PhpMyAdmin\\\\SqlParser\\\\Utils\\\\Formatter\\:\\:format\\(\\) expects array\\<string, array\\<int, array\\<string, int\\|string\\>\\>\\|bool\\|string\\>, array\\<string, mixed\\> given\\.$#"
 			count: 1
 			path: src/Utils/CLI.php
+
+		-
+			message: "#^Method PhpMyAdmin\\\\SqlParser\\\\Utils\\\\Error\\:\\:get\\(\\) should return array\\<int, array\\<int, int\\|string\\|null\\>\\> but returns array\\<int, array\\<int, mixed\\>\\>\\.$#"
+			count: 1
+			path: src/Utils/Error.php
 
 		-
 			message: "#^Argument of an invalid type array\\<int, array\\<string, int\\|string\\>\\>\\|bool\\|string supplied for foreach, only iterables are supported\\.$#"
@@ -1146,7 +1136,12 @@ parameters:
 			path: tests/Parser/WithStatementTest.php
 
 		-
-			message: "#^Cannot access offset int\\<0, max\\> on non\\-empty\\-array\\<int, string\\>\\|false\\.$#"
+			message: "#^Cannot cast mixed to int\\.$#"
+			count: 2
+			path: tests/TestCase.php
+
+		-
+			message: "#^Cannot access offset int on non\\-empty\\-array\\<int, string\\>\\|false\\.$#"
 			count: 1
 			path: tests/Utils/BufferedQueryTest.php
 
