@@ -251,6 +251,11 @@ parameters:
 			path: src/Components/JoinKeyword.php
 
 		-
+			message: "#^Array \\(array\\<array\\{name\\?\\: string, length\\?\\: int, order\\?\\: string\\}\\>\\) does not accept non\\-empty\\-array\\<string, mixed\\>\\.$#"
+			count: 1
+			path: src/Components/Key.php
+
+		-
 			message: "#^Binary operation \"\\.\" between array\\<string\\>\\|string and ' ' results in an error\\.$#"
 			count: 1
 			path: src/Components/Key.php
@@ -1129,6 +1134,11 @@ parameters:
 			message: "#^Parameter \\#1 \\$component of static method PhpMyAdmin\\\\SqlParser\\\\Components\\\\WithKeyword\\:\\:build\\(\\) expects PhpMyAdmin\\\\SqlParser\\\\Components\\\\WithKeyword, stdClass given\\.$#"
 			count: 1
 			path: tests/Parser/WithStatementTest.php
+
+		-
+			message: "#^Cannot access offset int on non\\-empty\\-array\\<int, string\\>\\|false\\.$#"
+			count: 1
+			path: tests/Utils/BufferedQueryTest.php
 
 		-
 			message: "#^Parameter \\#1 \\$var of function count expects array\\|Countable, array\\<int, string\\>\\|false given\\.$#"
