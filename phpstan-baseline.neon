@@ -51,8 +51,8 @@ parameters:
 			path: src/Components/ArrayObj.php
 
 		-
-			message: "#^Array \\(array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\>\\) does not accept PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\|null\\.$#"
-			count: 3
+			message: "#^Property PhpMyAdmin\\\\SqlParser\\\\Components\\\\CaseExpression\\:\\:\\$compare_values \\(array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\>\\) does not accept array\\<PhpMyAdmin\\\\SqlParser\\\\Components\\\\Expression\\|null\\>\\.$#"
+			count: 1
 			path: src/Components/CaseExpression.php
 
 		-
